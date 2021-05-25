@@ -36,8 +36,8 @@ argfd(int n, int *pfd, struct file **pf)
 }
 
 // Allocate a file descriptor for the given file.
-// Takes over file reference from caller on success.
-static int
+// Returns file reference on success.
+int
 fdalloc(struct file *f)
 {
   int fd;
